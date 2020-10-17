@@ -6,19 +6,19 @@ This document is an overview of virtual mystery's system features. It is split u
 System models make up the main structure for the virtual mystery application.
 
 ### User (system: models.py)
-Custom user model. Inherits from default django user class:
+Custom user model. Inherits from default django user class. Attributes include:
 
 - default user class attributes
-- group: users' group (refers to group model)
+- `group` - users' group (refers to group model)
 
 ### Group (system: models.py)
-Referred to by multiple users:
+Referred to by multiple users. Attributes include:
 
-- name: group name (no character limit)
-- practical: groups' practical (refers to practical model)
+- `name` - group name (no character limit)
+- `practical` - groups' practical (refers to practical model)
 
 ### Practical (system: models.py)
-Referred to by multiple groups. Used for TA/Instructor:
+Referred to by multiple groups. Used for TA/Instructor.
 
 - To Be Implemented
 
