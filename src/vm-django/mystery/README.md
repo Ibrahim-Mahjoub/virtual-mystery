@@ -1,46 +1,49 @@
 # Mystery Framework
 
-## Usage
+**NOTE: _All of these requests require an authentication token in the header._**
 
-NOTE: All of these requests require an authentication token in the header.
+## ReleaseList
 
-** Definition **
+### Definition
 
 Get a list of release data ordered by release number upto and including the current release.
 
-** Request **
+### Request
 
-`GET /mystery/release/list>`
+`GET /mystery/release/list`
 
-** Response **
+### Response
 
- - 200 OK on Success
- - 400 BAD REQUEST on Failure
+- `200 OK` on success
+- `400 BAD REQUEST` on failure
 
-JSON:
-
+**JSON:**
+```
  [
      {
         "commented": boolean,
         "number": releasenumber
      }
  ]
+```
 
-** Definition **
+## Artifact
+
+### Definition
 
 Get information on the artifact for the requested release. 
 
-** Request **
+### Request
 
 `GET /mystery/release/<release#>`
 
-** Response **
+### Response
 
- - 200 OK on Success
- - 400 BAD REQUEST on Failure
+- `200 OK` on success
+- `400 BAD REQUEST` on failure
 
-JSON:
-
+**JSON:**
+```
  [
      {
         "clue": cluetext,
@@ -48,3 +51,4 @@ JSON:
 	"mystery_hash": mysteryhash
      }
  ]
+```
