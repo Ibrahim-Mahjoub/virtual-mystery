@@ -1,26 +1,25 @@
 # Comment and Reply Framework
 
-## Usage
+**NOTE: _All of these requests require an authentication token in the header._**
 
-NOTE: All of these requests require an authentication token in the header.
+## CommentList
 
-
-** Definition **
+### Definition
 
 Get a sorted list of comments and replies for a specific mystery release.
 
-** Request **
+### Request
 
 `GET /comment/<release#>`
 
-** Response **
+### Response
 
- - 200 OK on Success
- - 400 BAD REQUEST on Failure
- - 403 FORBIDDEN if user has not yet commented
+- `200 OK` on Success
+- `400 BAD REQUEST` on Failure
+- `403 FORBIDDEN` if user has not yet commented
 
-JSON:
-
+**JSON:**
+```
  [
      {
 	"id": commentid,
@@ -35,56 +34,61 @@ JSON:
 	"username": commentowner
      }
  ]
+```
 
+## CommentCreate
 
-
-** Definiton **
+### Definiton
 
 Create a new comment for the users mystery and current release.
 
-** Request **
+### Request
 
 `POST /comment/create`
 
-JSON:
-
+**JSON:**
+```
  [
      {
 	"text": commenttext
      }
  ]
+```
 
-** Response **
+### Response
 
- - 201 Created on Success
- - 400 BAD REQUEST on Failure
- - 403 FORBIDDEN if user has previously commented
+- `201 Created` on Success
+- `400 BAD REQUEST` on Failure
+- `403 FORBIDDEN` if user has previously commented
 
 
-** Definiton **
+## ReplyCreate
+
+### Definiton
 
 Create a new reply for a specific comment and return the newly created reply.
 
-** Request **
+### Request
 
 `POST /comment/reply`
 
-JSON:
-
+**JSON:**
+```
  [
      {
 	"parent": parentcommentid,
 	"text": replytext
      }
  ]
+```
 
-** Response **
+### Response
 
- - 201 Created on Success
- - 400 BAD REQUEST on Failure
+- `201 Created` on Success
+- `400 BAD REQUEST` on Failure
 
-JSON:
-
+**JSON:**
+```
  [
      {
 	"id": replyid,
@@ -92,3 +96,4 @@ JSON:
 	"username": replyowner
      }
  ]
+```
