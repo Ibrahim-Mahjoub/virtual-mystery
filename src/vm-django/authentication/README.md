@@ -8,10 +8,10 @@ Notes:
 
 ## Login
 
+**Note: _New auth token is created if one doesn't exist._**
+
 ### Definition
 Get a user's auth token and information on valid login.
-
-**Note: _New auth token is created if one doesn't exist._**
 
 ### Request
 
