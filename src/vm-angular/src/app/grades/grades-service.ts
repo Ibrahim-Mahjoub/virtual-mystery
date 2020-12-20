@@ -6,7 +6,7 @@ import { HttpService } from '../http.service';
   providedIn: 'root'
 })
 export class GradesService {
-  API_URL = '/api';
+  API_URL = '138.197.167.8/api';
 
   constructor(private httpClient: HttpService) { }
   
