@@ -7,7 +7,7 @@ import { HttpService } from '../http.service';
 
 /* Service that allows access to all of the auth component functions */
 export class AuthService {
-  API_URL = 'https://138.197.167.8/api';
+  API_URL = 'http://6261636b656e64.live/api';
 
   constructor(private httpClient: HttpService) { }
 

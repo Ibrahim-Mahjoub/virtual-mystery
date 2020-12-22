@@ -8,8 +8,8 @@ import { HttpService} from '../http.service';
 /* Service that allows access to all artifactview component functions dealing with api */
 export class ArtifactserviceService {
 
-  API_URL = 'https://138.197.167.8/api';
-  ASSETS_URL = 'https://138.197.167.8/static/mystery';
+  API_URL = 'http://6261636b656e64.live/api';
+  ASSETS_URL = 'http://6261636b656e64.live/static/mystery';
 
   constructor(private httpClient: HttpService) { }
 
