@@ -9,8 +9,8 @@ import { HttpService} from '../http.service';
 export class TAService {
 
 
-  API_URL = 'http://6261636b656e64.live/api';
-  ASSETS_URL = 'http://6261636b656e64.live/static/mystery';
+  API_URL = 'https://6261636b656e64.live/api';
+  ASSETS_URL = 'https://6261636b656e64.live/static/mystery';
 
   constructor(private httpClient: HttpService) { }
 
