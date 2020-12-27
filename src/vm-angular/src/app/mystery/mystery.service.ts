@@ -6,7 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
   providedIn: 'root'
 })
 export class MysteryService {
-  API_URL = 'https://6261636b656e64.live/api';
+  API_URL = 'https://virtual-mystery.6261636b656e64.live/api';
 
   constructor(private httpClient: HttpService) { }
   
